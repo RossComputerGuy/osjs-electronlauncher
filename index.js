@@ -31,6 +31,7 @@ const createWindow = () => {
       experimentalCanvasFeatures: true
     }
   });
+  win.webContents.session.setUserAgent('Electron/1.0 (X11; OS.js; '+require('os').arch()+') WebKit Electron/1.0.0');
   win.setMenu(null);
   win.loadURL('http://localhost:8000');
   win.on('closed',() => win = createWindow());
