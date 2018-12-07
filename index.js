@@ -33,7 +33,7 @@ const createWindow = () => {
   });
   win.setMenu(null);
   win.loadURL('http://localhost:8000');
-  win.on('closed',() => win = null);
+  win.on('closed',() => win = createWindow());
 };
 app.on('ready',() => {
   const {screen} = require('electron');
